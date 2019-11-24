@@ -1,5 +1,5 @@
 # ReactDesktop
-Practicing with React. Making a React app similar to my JsDesktop.
+Practicing with React. Making a React app similar to my [JsDesktop](https://github.com/Adygha/JsDesktop).
 
 Used a dummy key/cert pair for now to keep it in HTTPS (must force browser to accept).
 
