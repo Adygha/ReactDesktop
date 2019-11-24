@@ -1,6 +1,8 @@
 # ReactDesktop
-Practicing with React. Making a JsDesktop like React app.
+Practicing with React. Making a React app similar to my JsDesktop.
 
 Used a dummy key/cert pair for now to keep it in HTTPS (must force browser to accept).
 
-Two pathe can be used for now: the root '/' and '/subapp'.
+Two paths can be used for now: the root '/' and '/subapp'.
+
+Initially runs on port '4000' (can be changed in 'src/config/conf.ts)
