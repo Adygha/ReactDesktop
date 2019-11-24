@@ -12,8 +12,8 @@ import * as Exp from 'express'
 //import BodyParse from 'body-parser'
 // import * as ExpSession from 'express-session'
 import ViewConsole from '../view/view-console'
-import RouterIndex from './index-router'
-import RouterSubapp from './subapp-router'
+import RouterIndex from './router-index'
+import RouterSubapp from './router-subapp'
 
 export default class ServerHive {
   // Fields
