@@ -1,8 +1,8 @@
 {
-  "name": "tscript-test",
-  "version": "0.0.0",
-  "description": "TScriptTest",
-  "main": "./build/server.js",
+  "name": "react-desktop",
+  "version": "0.1.0",
+  "description": "Practicing with React. Making a React app similar to my JsDesktop.",
+  "main": "./src/server.ts",
   "author": {
     "name": "Janty Azmat"
   },
@@ -13,6 +13,20 @@
     "build-client": "webpack --config webpack.client.config.js",
     "start": "node ./build/serer-bundle.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adygha/ReactDesktop.git"
+  },
+  "keywords": [
+    "react",
+    "desktop",
+    "typescipt"
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Adygha/ReactDesktop/issues"
+  },
+  "homepage": "https://github.com/Adygha/ReactDesktop#readme",
   "devDependencies": {
     "@types/body-parser": "^1.17.1",
     "@types/express": "^4.17.2",
