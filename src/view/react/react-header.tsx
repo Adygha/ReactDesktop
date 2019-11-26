@@ -11,23 +11,21 @@ export default class ReactHeader extends React.Component {
   context!: React.ContextType<typeof reactCommonData>
 
   render() {
-    return (<ReactShadowComp mode='open' tag='header'>
+    return (<ReactShadowComp tag='header' style={this.context.commonStyle}>
       <style>{THE_CSS}</style>
-      <header style={this.context.commonStyle}>
-        <ReactFlashMessage />
-        <ReactSideMenu />
-        <div className='user-header-container'>
-          <div className='user-header user-welcome'>
-            {/* // TODO: Prepare a welcome message if logged in */}
-          </div>
-          <div className='user-header'>
-            {/* // TODO: Prepare a user corner */}
-          </div>
-          <div className='user-header'>
-            {/* // TODO: Prepare other user corner */}
-          </div>
+      <ReactFlashMessage />
+      <ReactSideMenu />
+      <div className='user-header-container'>
+        <div className='user-header user-welcome'>
+          {/* // TODO: Prepare a welcome message if logged in */}
         </div>
-      </header>
+        <div className='user-header'>
+          {/* // TODO: Prepare a user corner */}
+        </div>
+        <div className='user-header'>
+          {/* // TODO: Prepare other user corner */}
+        </div>
+      </div>
     </ReactShadowComp>)
   }
 }

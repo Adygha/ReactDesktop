@@ -9,9 +9,9 @@ export default class ReactFooter extends React.Component {
   context!: React.ContextType<typeof reactCommonData>
 
   render() {
-    return (<ReactShadowComp mode='open' tag='footer'>
+    return (<ReactShadowComp tag='footer' style={this.context.commonStyle}>
       <style>{THE_CSS}</style>
-      <footer style={this.context.commonStyle}><p>Made by {this.context.commonProps.author}.</p></footer>
+      <p>Made by {this.context.commonProps.author}.</p>
     </ReactShadowComp>)
   }
 }

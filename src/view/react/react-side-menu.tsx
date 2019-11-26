@@ -9,18 +9,16 @@ export default class ReactSideMenu extends React.Component {
   context!: React.ContextType<typeof reactCommonData>
 
   render() {
-    return (<ReactShadowComp mode='open' tag='nav'>
+    return (<ReactShadowComp tag='nav'>
       <style>{THE_CSS}</style>
-      <nav className='nav-container'>
-        <label>
-          <input type='radio' className='nav-but' />
-          <span className='nav-strips'></span>
-          <span className='nav-text'>MENU</span>
-          <nav className='nav-menu' style={this.context.commonStyle}>
-            {this.context.sideMenu.anchors.map(anch => <a href={anch.href}>{anch.title}</a>)}
-          </nav>
-        </label>
-      </nav>
+      <label>
+        <input type='radio' className='nav-but' />
+        <span className='nav-strips'></span>
+        <span className='nav-text'>MENU</span>
+        <nav className='nav-menu' style={this.context.commonStyle}>
+          {this.context.sideMenu.anchors.map((anch, index) => <a href={anch.href} key={index}>{anch.title}</a>)}
+        </nav>
+      </label>
     </ReactShadowComp>)
   }
 }

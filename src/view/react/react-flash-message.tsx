@@ -9,7 +9,7 @@ export default class ReactFlashMessage extends React.Component {
   context!: React.ContextType<typeof reactFlashMessage>
 
   render() {
-    return (<ReactShadowComp mode='open' tag='div'>
+    return (<ReactShadowComp tag='div'>
       <style>{THE_CSS}</style>
       {this.context.message && <div className={this.context.type}>{this.context.message}</div>}
     </ReactShadowComp>)
