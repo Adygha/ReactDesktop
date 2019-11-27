@@ -5,7 +5,9 @@ label {
 	height: 100%;
 	padding: 6px;
 	margin-top: 2px;
+	margin-bottom: 4px;
 	cursor: pointer;
+	user-select: none;
 }
 
 .nav-but {
@@ -23,12 +25,12 @@ label {
 	user-select: none;
 }
 
-.nav-text:hover {
+label:hover .nav-text {
 	background-color: lightgray;
 }
 
-label:hover .nav-text {
-	background-color: lightgray;
+.nav-but:checked ~ .nav-text {
+	background-color: Highlight;
 }
 
 .nav-strips,
@@ -61,63 +63,6 @@ label:hover .nav-text {
 	top: -400%;
 }
 
-label:focus-within .nav-strips,
-label:focus-within .nav-strips:before,
-label:focus-within .nav-strips:after {
-	background-color: Highlight;
-}
-
-.nav-but:focus .nav-strips,
-.nav-but:focus .nav-strips:before,
-.nav-but:focus .nav-strips:after {
-	background-color: Highlight;
-}
-
-label:focus-within ~ .nav-text {
-	outline: 1px solid Highlight;
-}
-
-.nav-but:focus ~ .nav-text {
-	outline: 1px solid Highlight;
-}
-
-label:focus-within .nav-strips {
-	width: 75%;
-	transform: rotate(90deg);
-}
-
-.nav-but:focus ~ .nav-strips {
-	transform: rotate(90deg);
-}
-
-label:focus-within .nav-strips:before {
-	top: 180%;
-	left: 30%;
-	width: 70%;
-	transform: rotate(-30deg);
-}
-
-.nav-but:focus ~ .nav-strips:before {
-	top: 180%;
-	left: 30%;
-	width: 70%;
-	transform: rotate(-30deg);
-}
-
-label:focus-within .nav-strips:after {
-	top: -180%;
-	left: 30%;
-	width: 70%;
-	transform: rotate(30deg);
-}
-
-.nav-but:focus ~ .nav-strips:after {
-	top: -180%;
-	left: 30%;
-	width: 70%;
-	transform: rotate(30deg);
-}
-
 .nav-menu {
 	position: absolute;
 	border-radius: 5px;
@@ -129,7 +74,7 @@ label:focus-within .nav-strips:after {
 	width: 250px;
 	opacity: 0;
 	visibility: hidden;
-	transition: all 0.3s ease-out;
+	transition: all 300ms ease-out;
 }
 
 .nav-menu a {
@@ -143,12 +88,35 @@ label:focus-within .nav-strips:after {
 	background-color: lightgray;
 }
 
-label:focus-within .nav-menu {
+.nav-but:checked ~ .nav-menu {
 	opacity: 1;
 	visibility: visible;
 }
 
-.nav-but:focus ~ .nav-menu {
-	opacity: 1;
-	visibility: visible;
+.nav-but:checked ~ .nav-strips,
+.nav-but:checked ~ .nav-strips:before,
+.nav-but:checked ~ .nav-strips:after {
+	background-color: Highlight;
+}
+
+.nav-but:checked ~ .nav-text {
+	outline: 1px solid Highlight;
+}
+
+.nav-but:checked ~ .nav-strips {
+	transform: rotate(90deg);
+}
+
+.nav-but:checked ~ .nav-strips:before {
+	top: 180%;
+	left: 30%;
+	width: 70%;
+	transform: rotate(-30deg);
+}
+
+.nav-but:checked ~ .nav-strips:after {
+	top: -180%;
+	left: 30%;
+	width: 70%;
+	transform: rotate(30deg);
 }
